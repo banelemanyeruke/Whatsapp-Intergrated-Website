@@ -25,7 +25,7 @@ document.querySelectorAll('.product').forEach(product => {
     
     Check the product image here: ${imageUrl}`;
     
-    buyLink.href = `https://wa.me/270818097878?text=${encodeURIComponent(message)}`;
+    buyLink.href = `https://wa.me/270688362041?text=${encodeURIComponent(message)}`;
 });
 // Get the modal element
 var modal = document.getElementById('modal');
