@@ -1,0 +1,429 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: #e7ecef;
+    color: #274c77;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #274c77;
+    font-weight: bold;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style-type: none;
+}
+
+/* Navigation */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #274c77;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.navbar .logo h1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.navbar nav ul {
+    display: flex;
+    gap: 20px;
+}
+
+.navbar nav ul li {
+    display: inline-block;
+}
+
+.navbar nav ul li a {
+    color: #e7ecef;
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.navbar nav ul li a:hover {
+    color: #a3cef1;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: linear-gradient(rgba(39, 76, 119, 0.8), rgba(39, 76, 119, 0.8)), url('https://demo.templatesjungle.com/supple/images/billboard-img.jpg') no-repeat center center/cover;
+    padding: 100px 50px;
+    height: 90vh;
+    color: #fff;
+}
+
+.hero-text h1 {
+    font-size: 3rem;
+    line-height: 1.2;
+    color: white; /* This ensures the font color is white */
+}
+
+.hero-text p {
+    font-size: 1.2rem;
+    margin: 20px 0;
+}
+
+.hero .btn {
+    padding: 10px 30px;
+    background-color: #6096ba;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.hero .btn:hover {
+    background-color: #a3cef1;
+}
+
+.hero-image img {
+    width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Features Section */
+#features {
+    background-color: #f4f4f4;
+    padding: 50px;
+    text-align: center;
+}
+
+#features h2 {
+    margin-bottom: 20px;
+}
+
+#features ul {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 0;
+}
+
+#features li {
+    font-size: 18px;
+    padding: 20px;
+    background-color: #274c77;
+    color: #fff;
+    border-radius: 10px;
+    max-width: 200px;
+}
+
+/* Reviews Section */
+#reviews {
+    background-color: #274c77; /* Dark blue */background */
+    padding: 60px 20px;
+    text-align: center;
+    color: #e7ecef; /* Light grey */
+}
+
+#reviews h2 {
+    font-size: 36px;
+    margin-bottom: 40px;
+    color: #a3cef1; /* Light blue */
+}
+
+/* Reviews Grid */
+.reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+/* Review Card */
+.review-card {
+    background-color: #1a1a1a; /* Slightly lighter background for the cards */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover {
+    transform: translateY(-10px); /* Lift up effect on hover */
+}
+
+.review-card h3 {
+    font-size: 24px;
+    color: #fff; /* White name text */
+}
+
+.review-card p {
+    font-size: 14px;
+    color: #b0b0b0; /* Light gray for date */
+}
+
+.review-card blockquote {
+    font-size: 16px;
+    font-style: italic;
+    color: #dcdcdc; /* Slightly lighter gray for review text */
+    margin: 15px 0;
+    line-height: 1.5;
+}
+
+/* Star Rating */
+.rating {
+    font-size: 20px;
+    color: #f5c518; /* Yellow stars */
+    margin-top: 10px;
+}
+
+
+/* Video Section Styling */
+#video {
+    background-color: #ffffff; /* White background */
+    color: #274c77; /* Dark blue text color for contrast */
+    padding: 60px 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+#video h2 {
+    font-size: 2.5rem;
+    color: #274c77; /* Dark blue for contrast */
+    margin-bottom: 30px;
+    text-shadow: none; /* Remove shadow for clarity on white background */
+}
+
+/* Video Container for responsiveness */
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* Aspect ratio 16:9 */
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background-color: #e7ecef; /* Light grey background around video */
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    margin: 0 auto;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 15px;
+}
+
+#video::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0.2)); /* Subtle white gradient for effect */
+    pointer-events: none;
+    z-index: 1;
+}
+
+
+/* Product Section Styling */
+#products {
+    background-color: #f8f9fa;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 36px;
+    color: #274c77; /* Header color using your color palette */
+    margin-bottom: 40px;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    justify-items: center;
+}
+
+.product {
+    background-color: #e7ecef; /* Background color from your palette */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.product:hover {
+    transform: translateY(-10px);
+}
+
+.product img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.product h3 {
+    color: #274c77; /* Title color */
+    margin: 15px 0;
+    font-size: 24px;
+}
+
+.product p {
+    color: #8b8c89; /* Description text color */
+    font-size: 16px;
+    line-height: 1.5;
+}
+.price {
+  font-size: 18px;
+  color: #274c77;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.buy-now {
+    
+  background-color: #6096ba;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+/* Contact Section */
+#contact {
+    padding: 50px;
+    background-color: #274c77;
+    color: #e7ecef;
+    text-align: center;
+}
+
+#contact h2 {
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 18px;
+}
+
+#contact a {
+    color: #a3cef1;
+}
+/* Modal (Pop-up) Styling */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1000; /* Ensure it's on top */
+    overflow: auto; /* Allow scrolling when modal is open */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border: 1px solid #274c77;
+    width: 80%;
+    max-width: 800px;
+    border-radius: 10px;
+    text-align: left;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    overflow-y: auto; /* Enable vertical scrolling */
+    max-height: 80vh; /* Set max height to 80% of the viewport height */
+}
+
+.modal-content h3,
+.modal-content h4 {
+    font-size: 1.5rem;
+    color: #274c77;
+    margin-bottom: 10px;
+}
+
+.modal-content p {
+    font-size: 1.1rem;
+    color: #6096ba;
+}
+
+.close-btn {
+    color: #274c77;
+    float: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close-btn:hover {
+    color: #8b8c89;
+}
+/* Footer */
+footer {
+    padding: 20px;
+    background-color: #274c77;
+    text-align: center;
+    color: #e7ecef;
+    font-size: 14px;
+}
+
+footer a {
+    color: #a3cef1;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 50px 20px;
+        height: auto;
+    }
+
+    .hero-text h1 {
+        font-size: 2.5rem;
+    }
+
+    .hero-image img {
+        width: 100%;
+        margin-top: 30px;
+    }
+
+    .navbar nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-grid {
+        flex-direction: column;
+    }
+}
